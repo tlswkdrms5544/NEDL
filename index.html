@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEDL | Nano Electronic Device Laboratory</title>
+    <title>NEDL | Nano Electronic Device Lab</title>
     
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -30,6 +30,7 @@
         body {
             background-color: #050505;
             color: #f8fafc;
+            /* 미세 그리드 배경 */
             background-image: radial-gradient(rgba(45, 212, 191, 0.12) 1px, transparent 1px);
             background-size: 40px 40px;
         }
@@ -43,7 +44,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .nav-link.active { color: #2dd4bf; font-weight: 700; }
+        .nav-link.active { color: #2dd4bf; font-weight: 700; border-bottom: 2px solid #2dd4bf; }
         .pub-card:hover .pub-title { color: #2dd4bf; }
     </style>
 </head>
@@ -55,12 +56,12 @@
             <div class="flex items-center space-x-3">
                 <div class="w-8 h-8 bg-accent rounded flex items-center justify-center font-black text-dark text-xs">N</div>
                 <div class="flex flex-col">
-                    <span class="text-lg font-bold tracking-tighter text-white">NEDL</span>
-                    <span class="text-[9px] text-accent font-bold tracking-widest leading-none">HANSUNG UNIV.</span>
+                    <span class="text-lg font-bold tracking-tighter text-white leading-none">NEDL</span>
+                    <span class="text-[9px] text-accent font-bold tracking-widest mt-1">HANSUNG UNIV.</span>
                 </div>
             </div>
             <div id="nav-links" class="hidden md:flex space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase">
-                <a href="#home" class="nav-link text-white">Home</a>
+                <a href="#home" class="nav-link text-white transition-colors">Home</a>
                 <a href="#member" class="nav-link text-subtle hover:text-accent transition-colors">Member</a>
                 <a href="#research" class="nav-link text-subtle hover:text-accent transition-colors">Research</a>
                 <a href="#publication" class="nav-link text-subtle hover:text-accent transition-colors">Publication</a>
@@ -70,31 +71,29 @@
     </nav>
 
     <main>
-        <!-- [HOME] -->
+        <!-- [HOME SECTION] - 반영된 연구실 정보 -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
             <div class="max-w-5xl text-center">
-                <!-- Affiliation Name 변경 -->
+                <!-- Affiliation: Hansung Univ. -->
                 <span class="inline-block px-4 py-1 mb-8 text-[10px] font-bold tracking-[0.3em] text-accent border border-accent/20 rounded-full bg-accent/5 uppercase">Hansung Univ. · System Semiconductor</span>
                 
-                <!-- Main Title 변경 -->
+                <!-- Lab Name: Nano Electronic Device Lab -->
                 <h1 class="text-5xl md:text-8xl font-extrabold mb-10 tracking-tighter leading-tight gradient-text">
                     Nano Electronic <br> Device Lab
                 </h1>
                 
-                <!-- 추천 Vision & Introductory Sentence 반영 -->
+                <!-- Vision & Introductory Sentence -->
                 <p class="text-lg md:text-xl text-subtle max-w-3xl mx-auto leading-relaxed mb-16 font-light">
-                    Exploring the <span class="text-white font-medium">fundamental limits of nano-scale physics</span> to innovate 
-                    the next generation of <span class="text-white font-medium">AI hardware architectures</span>. 
-                    We lead the future of semiconductor technology through advanced materials and energy-efficient device design.
+                    Exploring the <span class="text-white font-medium">fundamental limits of nano-scale physics</span> to innovate the next generation of <span class="text-white font-medium">AI hardware architectures</span>. We lead the future of semiconductor technology through advanced materials and energy-efficient device design.
                 </p>
                 
-                <!-- Recruitment Card -->
+                <!-- Recruitment Card (Placeholder) -->
                 <div class="group relative w-full max-w-2xl mx-auto">
                     <div class="absolute -inset-1 bg-gradient-to-r from-accent to-blue-500 rounded-2xl blur opacity-20 transition duration-700 group-hover:opacity-40"></div>
                     <div class="relative bg-surface border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
                         <div class="text-left">
                             <h3 class="text-white font-bold text-lg mb-1">Join Our Research Team</h3>
-                            <p class="text-subtle text-sm font-light leading-snug">We are looking for motivated graduate and undergraduate students <br> who are passionate about the future of nano-electronics.</p>
+                            <p class="text-subtle text-sm font-light leading-snug">We are looking for motivated students who are passionate about the future of nano-electronics.</p>
                         </div>
                         <a href="mailto:ickjoon.park@hansung.ac.kr" class="px-6 py-3 bg-white text-dark text-[11px] font-bold rounded-lg uppercase tracking-widest hover:bg-accent transition-colors">Contact PI</a>
                     </div>
@@ -102,26 +101,133 @@
             </div>
         </section>
 
-        <!-- 이하 [MEMBER], [RESEARCH], [PUBLICATION], [LECTURE] 섹션은 동일하게 유지됩니다. -->
-        <section id="member" class="py-32 border-y border-white/5">
-            <div class="max-w-7xl mx-auto px-6 text-center text-subtle/50 italic">
-                (Member details go here...)
+        <!-- [MEMBER SECTION] - 교수님 성함만 유지 -->
+        <section id="member" class="py-32 border-y border-white/5 bg-surface/30">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20">01. Member</h2>
+                
+                <!-- Professor Frame -->
+                <div class="bg-surface border border-white/10 rounded-[40px] overflow-hidden mb-24 flex flex-col md:flex-row">
+                    <div class="md:w-[400px] aspect-[3/4] bg-neutral-900 border-r border-white/5 flex items-center justify-center">
+                        <span class="text-white/10 text-xs uppercase tracking-widest">Image Placeholder</span>
+                    </div>
+                    <div class="flex-1 p-10 md:p-16 flex flex-col justify-center">
+                        <span class="text-accent text-[11px] font-bold tracking-widest uppercase mb-4">Principal Investigator</span>
+                        <h3 class="text-5xl font-bold mb-4 tracking-tighter text-white">Ickjoon Park, Ph.D.</h3>
+                        <p class="text-lg text-subtle mb-10 font-light">Enter Current Position <br> Enter Affiliation Department</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-10 pt-10 border-t border-white/10">
+                            <div>
+                                <span class="block text-white font-bold text-sm mb-4">Biography</span>
+                                <ul class="text-xs text-subtle font-light space-y-2 leading-relaxed">
+                                    <li>• Update experience history 01</li>
+                                    <li>• Update experience history 02</li>
+                                    <li>• Update education history</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="block text-white font-bold text-sm mb-4">Contact</span>
+                                <p class="text-xs text-subtle font-light leading-loose">
+                                    Office: Enter Office Location<br>
+                                    Email: ickjoon.park@hansung.ac.kr<br>
+                                    Phone: Enter Phone Number
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Students Placeholder -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-surface border border-white/5 p-8 rounded-3xl group">
+                        <span class="text-[9px] font-bold tracking-widest text-accent uppercase">Position</span>
+                        <h4 class="text-xl font-bold mt-2 text-white">Member Name</h4>
+                        <p class="text-sm text-subtle mt-4 font-light italic">Research Topic</p>
+                    </div>
+                    <div class="border-2 border-dashed border-white/5 rounded-3xl p-8 flex items-center justify-center text-subtle/30 text-[11px] font-bold uppercase tracking-widest">
+                        We are Hiring
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [RESEARCH SECTION] - 세부 정보 제거 -->
+        <section id="research" class="py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20 text-center">02. Research Area</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">01</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Area Title <br> Here</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Enter a description of your first research core area here.</p>
+                    </div>
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">02</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Area Title <br> Here</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Enter a description of your second research core area here.</p>
+                    </div>
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">03</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Area Title <br> Here</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Enter a description of your third research core area here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [PUBLICATION SECTION] - 세부 정보 제거 -->
+        <section id="publication" class="py-32 bg-surface/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20">03. Publications</h2>
+                <div class="space-y-16">
+                    <div class="flex flex-col md:flex-row gap-10 md:gap-24">
+                        <span class="text-5xl font-black text-white/5 tracking-tighter md:w-24">2024</span>
+                        <div class="flex-1 space-y-10">
+                            <div class="pub-card group">
+                                <p class="pub-title text-lg font-bold text-white/90 mb-2 transition-colors">"Enter the Title of Your Academic Publication Here"</p>
+                                <p class="text-sm text-subtle font-light leading-relaxed italic">Authors Name, <span class="text-accent/80 font-medium not-italic underline underline-offset-4 decoration-1">Journal Name</span>, 2024.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [LECTURE SECTION] - 세부 정보 제거 -->
+        <section id="lecture" class="py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20 text-center">04. Lectures</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-surface border border-white/10 rounded-3xl flex justify-between items-center group hover:bg-accent hover:text-dark transition-all duration-500">
+                        <span class="text-lg font-bold">Course Title (Korean)</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 group-hover:opacity-100">Semester Info</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-20 border-t border-white/5 bg-dark text-center">
-        <p class="text-[10px] text-white/20 uppercase tracking-[0.5em]">© 2024 Nano Electronic Device Lab. All rights reserved.</p>
+    <footer class="py-20 border-t border-white/5 bg-dark">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-8">
+                <div class="w-6 h-6 bg-accent rounded"></div>
+                <span class="font-bold text-white tracking-widest uppercase">NEDL</span>
+            </div>
+            <p class="text-[10px] text-white/20 uppercase tracking-[0.4em]">© 2024 Nano Electronic Device Lab. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Scroll Spy Script -->
     <script>
         const links = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
+
         window.addEventListener('scroll', () => {
             let current = "";
             sections.forEach(section => {
-                if (pageYOffset >= section.offsetTop - 250) {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 250) {
                     current = section.getAttribute('id');
                 }
             });
