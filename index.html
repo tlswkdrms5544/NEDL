@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEDL | Nano Electronic Device Laboratory</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        surface: '#0f0f0f',
+                        accent: '#2dd4bf', 
+                        subtle: '#94a3b8',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f8fafc;
+            background-image: radial-gradient(rgba(45, 212, 191, 0.12) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass {
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active { color: #2dd4bf; font-weight: 700; }
+        .pub-card:hover .pub-title { color: #2dd4bf; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-accent/30 selection:text-accent">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-accent rounded flex items-center justify-center font-black text-dark text-xs">N</div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-tighter text-white">NEDL</span>
+                    <span class="text-[9px] text-accent font-bold tracking-widest leading-none">HANSUNG UNIV.</span>
+                </div>
+            </div>
+            <div id="nav-links" class="hidden md:flex space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase">
+                <a href="#home" class="nav-link text-white">Home</a>
+                <a href="#member" class="nav-link text-subtle hover:text-accent transition-colors">Member</a>
+                <a href="#research" class="nav-link text-subtle hover:text-accent transition-colors">Research</a>
+                <a href="#publication" class="nav-link text-subtle hover:text-accent transition-colors">Publication</a>
+                <a href="#lecture" class="nav-link text-subtle hover:text-accent transition-colors">Lecture</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- [HOME] -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+            <div class="max-w-5xl text-center">
+                <span class="inline-block px-4 py-1 mb-8 text-[10px] font-bold tracking-[0.3em] text-accent border border-accent/20 rounded-full bg-accent/5 uppercase">Hansung University · System Semiconductor</span>
+                <h1 class="text-5xl md:text-8xl font-extrabold mb-10 tracking-tighter leading-tight gradient-text">
+                    Nano Electronic <br> Device Laboratory
+                </h1>
+                <p class="text-lg md:text-xl text-subtle max-w-3xl mx-auto leading-relaxed mb-16 font-light">
+                    Focusing on development of <span class="text-white font-medium">low-dimensional nano materials</span> and 
+                    <span class="text-white font-medium">AI semiconductor device</span> applications for next-generation systems.
+                </p>
+                
+                <!-- Recruitment Card -->
+                <div class="group relative w-full max-w-2xl mx-auto">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accent to-blue-500 rounded-2xl blur opacity-20 transition duration-700 group-hover:opacity-40"></div>
+                    <div class="relative bg-surface border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">Recruiting Students</h3>
+                            <p class="text-subtle text-sm font-light leading-snug">We are looking for motivated graduate/undergraduate students. <br> Join our research on nano-electronics.</p>
+                        </div>
+                        <a href="mailto:ickjoon.park@hansung.ac.kr" class="px-6 py-3 bg-white text-dark text-[11px] font-bold rounded-lg uppercase tracking-widest hover:bg-accent transition-colors">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [MEMBER] -->
+        <section id="member" class="py-32 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20">01. Member</h2>
+                
+                <!-- Professor -->
+                <div class="bg-surface border border-white/10 rounded-[40px] overflow-hidden mb-24 flex flex-col md:flex-row shadow-2xl shadow-accent/5">
+                    <div class="md:w-[400px] aspect-[3/4] bg-neutral-900 border-r border-white/5 overflow-hidden">
+                        <!-- 실제 사진 주소: https://sites.google.com/view/ickjoonpark 상단 사진 -->
+                        <img src="https://lh3.googleusercontent.com/pw/ADNWV8hr09vO4qW0p66Yv0n1D..." alt="Prof. Ickjoon Park" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div class="flex-1 p-10 md:p-16 flex flex-col justify-center">
+                        <span class="text-accent text-[11px] font-bold tracking-widest uppercase mb-4">Principal Investigator</span>
+                        <h3 class="text-5xl font-bold mb-4 tracking-tighter text-white">Ickjoon Park, Ph.D.</h3>
+                        <p class="text-lg text-subtle mb-10 font-light">Assistant Professor <br> Dept. of Electronics and Information Engineering, Hansung University</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-10 pt-10 border-t border-white/10">
+                            <div>
+                                <span class="block text-white font-bold text-sm mb-4">Research Experience</span>
+                                <ul class="text-xs text-subtle font-light space-y-2 leading-relaxed">
+                                    <li>• SK Hynix, Senior Engineer</li>
+                                    <li>• University of Pennsylvania, Postdoc</li>
+                                    <li>• Gwangju Institute of Science and Tech, Ph.D.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="block text-white font-bold text-sm mb-4">Contact Info</span>
+                                <p class="text-xs text-subtle font-light leading-loose">
+                                    Office: Research Building, #214<br>
+                                    Email: ickjoon.park@hansung.ac.kr<br>
+                                    Tel: +82-02-760-4015
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Students -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Ph.D. Candidate -->
+                    <div class="bg-surface border border-white/5 p-8 rounded-3xl group hover:border-accent/30 transition-all">
+                        <span class="text-[9px] font-bold tracking-widest text-accent uppercase">PhD Candidate</span>
+                        <h4 class="text-xl font-bold mt-2 text-white">Seunghyun Kim</h4>
+                        <p class="text-sm text-subtle mt-4 font-light italic">Neuromorphic Computing Device</p>
+                    </div>
+                    <!-- Master Student -->
+                    <div class="bg-surface border border-white/5 p-8 rounded-3xl group hover:border-blue-400/30 transition-all">
+                        <span class="text-[9px] font-bold tracking-widest text-blue-400 uppercase">Master Student</span>
+                        <h4 class="text-xl font-bold mt-2 text-white">Minwoo Lee</h4>
+                        <p class="text-sm text-subtle mt-4 font-light italic">2D Material Logic Device</p>
+                    </div>
+                    <!-- Member cards can be added more here -->
+                    <div class="border-2 border-dashed border-white/5 rounded-3xl p-8 flex items-center justify-center text-subtle/30 text-[11px] font-bold uppercase tracking-widest">
+                        Join NEDL Team
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [RESEARCH] -->
+        <section id="research" class="py-32">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20">02. Research Interests</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">01</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Next-Gen <br>Nanomaterials</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Synthesis and characterization of 2D materials (TMDs, Graphene) and Nanowires for advanced electronic devices.</p>
+                    </div>
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">02</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Neuromorphic <br>AI Devices</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Development of synaptic transistors and hardware accelerators to mimic biological neural networks.</p>
+                    </div>
+                    <div class="p-12 bg-surface border border-white/5 rounded-[40px] text-left relative group hover:border-accent/40 transition-all">
+                        <div class="text-accent/20 font-black text-6xl absolute top-8 right-8 group-hover:text-accent transition-colors">03</div>
+                        <h3 class="text-2xl font-bold text-white mb-6 leading-tight pt-12">Nano-scale <br>Device Physics</h3>
+                        <p class="text-subtle text-sm font-light leading-relaxed">Exploring charge transport phenomena and device reliability at the nanometer scale for future systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [PUBLICATION] -->
+        <section id="publication" class="py-32 bg-surface/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20">03. Publications</h2>
+                <div class="space-y-16">
+                    <!-- 2022 -->
+                    <div class="flex flex-col md:flex-row gap-10 md:gap-24">
+                        <span class="text-5xl font-black text-white/5 tracking-tighter md:w-24">2022</span>
+                        <div class="flex-1 space-y-10">
+                            <div class="pub-card group">
+                                <p class="pub-title text-lg font-bold text-white/90 mb-2 transition-colors">"Wafer-scale selective growth of 2D layered materials for advanced integrated circuits"</p>
+                                <p class="text-sm text-subtle font-light leading-relaxed italic">I. Park et al., <span class="text-accent/80 font-medium not-italic underline underline-offset-4 decoration-1">Advanced Materials</span>, 2022.</p>
+                            </div>
+                            <div class="pub-card group">
+                                <p class="pub-title text-lg font-bold text-white/90 mb-2 transition-colors">"Ultra-sensitive and transparent sensors based on low-dimensional nanomaterials"</p>
+                                <p class="text-sm text-subtle font-light leading-relaxed italic">I. Park, <span class="text-accent/80 font-medium not-italic underline underline-offset-4">ACS Nano</span>, 2022.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2021 -->
+                    <div class="flex flex-col md:flex-row gap-10 md:gap-24">
+                        <span class="text-5xl font-black text-white/5 tracking-tighter md:w-24">2021</span>
+                        <div class="flex-1 space-y-10">
+                            <div class="pub-card group">
+                                <p class="pub-title text-lg font-bold text-white/90 mb-2 transition-colors">"Van der Waals heterostructure synaptic transistors for artificial intelligence"</p>
+                                <p class="text-sm text-subtle font-light leading-relaxed italic">I. Park et al., <span class="text-accent/80 font-medium not-italic underline underline-offset-4">Advanced Functional Materials</span>, 2021.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [LECTURE] -->
+        <section id="lecture" class="py-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-[11px] font-bold tracking-[0.5em] text-accent uppercase mb-20 text-center">04. Lectures</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-surface border border-white/10 rounded-3xl flex justify-between items-center group hover:bg-accent hover:text-dark transition-all duration-500">
+                        <span class="text-lg font-bold">Semiconductor Physics (반도체공학)</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 group-hover:opacity-100">Semester I</span>
+                    </div>
+                    <div class="p-8 bg-surface border border-white/10 rounded-3xl flex justify-between items-center group hover:bg-accent hover:text-dark transition-all duration-500">
+                        <span class="text-lg font-bold">Electronic Circuits (전자회로)</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 group-hover:opacity-100">Semester II</span>
+                    </div>
+                    <div class="p-8 bg-surface border border-white/10 rounded-3xl flex justify-between items-center group hover:bg-accent hover:text-dark transition-all duration-500">
+                        <span class="text-lg font-bold">Solid State Physics (고체물리)</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 group-hover:opacity-100">Graduate</span>
+                    </div>
+                    <div class="p-8 bg-surface border border-white/10 rounded-3xl flex justify-between items-center group hover:bg-accent hover:text-dark transition-all duration-500">
+                        <span class="text-lg font-bold">Nanotechnology (나노기술)</span>
+                        <span class="text-[10px] uppercase tracking-widest font-bold opacity-40 group-hover:opacity-100">Semester I</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-dark">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-6 h-6 bg-accent rounded"></div>
+                    <span class="font-bold text-white tracking-widest uppercase">NEDL LAB</span>
+                </div>
+                <p class="text-subtle text-xs leading-loose font-light">Hansung University <br>Dept. of Electronics & Information Engineering <br>Seoul, South Korea</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] text-white/20 uppercase tracking-[0.4em] mb-4">© 2024 Nano Electronic Device Lab. <br> All rights reserved.</p>
+                <a href="mailto:ickjoon.park@hansung.ac.kr" class="text-accent text-xs font-bold transition-all hover:tracking-widest transition-all">Contact Professor →</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Interaction Script -->
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 250) {
+                    current = section.getAttribute('id');
+                }
+            });
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
