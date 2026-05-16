@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEDL | Nano Electronic Device Laboratory</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        surface: '#0f0f0f',
+                        accent: '#2dd4bf', 
+                        subtle: '#94a3b8',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #f8fafc;
+            background-image: radial-gradient(rgba(45, 212, 191, 0.12) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass {
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-link.active { color: #2dd4bf; font-weight: 700; }
+        .pub-card:hover .pub-title { color: #2dd4bf; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-accent/30 selection:text-accent">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] glass">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-accent rounded flex items-center justify-center font-black text-dark text-xs">N</div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-tighter text-white">NEDL</span>
+                    <span class="text-[9px] text-accent font-bold tracking-widest leading-none">HANSUNG UNIV.</span>
+                </div>
+            </div>
+            <div id="nav-links" class="hidden md:flex space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase">
+                <a href="#home" class="nav-link text-white">Home</a>
+                <a href="#member" class="nav-link text-subtle hover:text-accent transition-colors">Member</a>
+                <a href="#research" class="nav-link text-subtle hover:text-accent transition-colors">Research</a>
+                <a href="#publication" class="nav-link text-subtle hover:text-accent transition-colors">Publication</a>
+                <a href="#lecture" class="nav-link text-subtle hover:text-accent transition-colors">Lecture</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- [HOME] -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+            <div class="max-w-5xl text-center">
+                <!-- Affiliation Name 변경 -->
+                <span class="inline-block px-4 py-1 mb-8 text-[10px] font-bold tracking-[0.3em] text-accent border border-accent/20 rounded-full bg-accent/5 uppercase">Hansung Univ. · System Semiconductor</span>
+                
+                <!-- Main Title 변경 -->
+                <h1 class="text-5xl md:text-8xl font-extrabold mb-10 tracking-tighter leading-tight gradient-text">
+                    Nano Electronic <br> Device Lab
+                </h1>
+                
+                <!-- 추천 Vision & Introductory Sentence 반영 -->
+                <p class="text-lg md:text-xl text-subtle max-w-3xl mx-auto leading-relaxed mb-16 font-light">
+                    Exploring the <span class="text-white font-medium">fundamental limits of nano-scale physics</span> to innovate 
+                    the next generation of <span class="text-white font-medium">AI hardware architectures</span>. 
+                    We lead the future of semiconductor technology through advanced materials and energy-efficient device design.
+                </p>
+                
+                <!-- Recruitment Card -->
+                <div class="group relative w-full max-w-2xl mx-auto">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accent to-blue-500 rounded-2xl blur opacity-20 transition duration-700 group-hover:opacity-40"></div>
+                    <div class="relative bg-surface border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">Join Our Research Team</h3>
+                            <p class="text-subtle text-sm font-light leading-snug">We are looking for motivated graduate and undergraduate students <br> who are passionate about the future of nano-electronics.</p>
+                        </div>
+                        <a href="mailto:ickjoon.park@hansung.ac.kr" class="px-6 py-3 bg-white text-dark text-[11px] font-bold rounded-lg uppercase tracking-widest hover:bg-accent transition-colors">Contact PI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 이하 [MEMBER], [RESEARCH], [PUBLICATION], [LECTURE] 섹션은 동일하게 유지됩니다. -->
+        <section id="member" class="py-32 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-6 text-center text-subtle/50 italic">
+                (Member details go here...)
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/5 bg-dark text-center">
+        <p class="text-[10px] text-white/20 uppercase tracking-[0.5em]">© 2024 Nano Electronic Device Lab. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                if (pageYOffset >= section.offsetTop - 250) {
+                    current = section.getAttribute('id');
+                }
+            });
+            links.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
